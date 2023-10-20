@@ -6,7 +6,7 @@ import io.camunda.zeebe.client.api.response.ActivatedJob
 import io.camunda.zeebe.client.api.worker.JobClient
 import io.camunda.zeebe.model.bpmn.Bpmn
 import io.camunda.zeebe.process.test.assertions.BpmnAssert
-import io.camunda.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration
+import io.camunda.zeebe.spring.client.configuration.ZeebeClientAllAutoConfiguration
 import io.camunda.zeebe.spring.client.metrics.DefaultNoopMetricsRecorder
 import io.camunda.zeebe.spring.test.ZeebeSpringTest
 import io.mockk.coEvery
@@ -24,7 +24,7 @@ import org.springframework.boot.test.context.SpringBootTest
 @ZeebeSpringTest
 @SpringBootTest(classes = [
     JacksonAutoConfiguration::class,
-    ZeebeClientStarterAutoConfiguration::class,
+    ZeebeClientAllAutoConfiguration::class,
     CoworkerAutoConfiguration::class,
     CoworkerAutoConfiguration::class,
     WorkerErrorIntegrationTest::class

@@ -5,7 +5,7 @@ import io.camunda.zeebe.client.api.response.ActivatedJob
 import io.camunda.zeebe.client.api.worker.JobClient
 import io.camunda.zeebe.model.bpmn.Bpmn
 import io.camunda.zeebe.process.test.assertions.BpmnAssert
-import io.camunda.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration
+import io.camunda.zeebe.spring.client.configuration.ZeebeClientAllAutoConfiguration
 import io.camunda.zeebe.spring.test.ZeebeSpringTest
 import kotlinx.coroutines.future.await
 import org.assertj.core.api.Assertions.assertThat
@@ -26,7 +26,7 @@ private const val OVERRIDABLE_WORKER_TYPE = "overridable-worker"
 @SpringBootTest(
     classes = [
         JacksonAutoConfiguration::class,
-        ZeebeClientStarterAutoConfiguration::class,
+        ZeebeClientAllAutoConfiguration::class,
         OverridePropertiesCoworkerIntegrationTest::class,
         CoworkerAutoConfiguration::class
     ]

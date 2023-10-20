@@ -37,7 +37,7 @@
     <version.java>1.8</version.java>
     <maven.version>3.0</maven.version>
 
-    <zeebe.version>8.2.7</zeebe.version>
+    <zeebe.version>8.3.0</zeebe.version>
 
     <protobuf.version>3.22.0</protobuf.version>
     <grpc.version>1.53.0</grpc.version>
@@ -61,7 +61,7 @@
 
     <plugin.version.protobuf-maven-plugin>0.6.1</plugin.version.protobuf-maven-plugin>
     <extension.version.os-maven-plugin>1.7.1</extension.version.os-maven-plugin>
-    <spring-zeebe.version>8.1.17</spring-zeebe.version>
+    <spring-zeebe.version>8.3.0</spring-zeebe.version>
     <spring-boot.version>2.7.17</spring-boot.version>
     <scala.version>2.13.10</scala.version>
     <awaitility.version>4.2.0</awaitility.version>

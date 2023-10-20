@@ -7,7 +7,7 @@ import io.camunda.zeebe.model.bpmn.Bpmn
 import io.camunda.zeebe.process.test.assertions.BpmnAssert
 import io.camunda.zeebe.spring.client.annotation.Variable
 import io.camunda.zeebe.spring.client.annotation.ZeebeVariable
-import io.camunda.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration
+import io.camunda.zeebe.spring.client.configuration.ZeebeClientAllAutoConfiguration
 import io.camunda.zeebe.spring.test.ZeebeSpringTest
 import kotlinx.coroutines.future.await
 import org.assertj.core.api.Assertions.assertThat
@@ -24,7 +24,7 @@ import java.math.BigDecimal
 @SpringBootTest(
     classes = [
         JacksonAutoConfiguration::class,
-        ZeebeClientStarterAutoConfiguration::class,
+        ZeebeClientAllAutoConfiguration::class,
         SpelValuesCoworkerIntegrationTest::class,
         CoworkerAutoConfiguration::class
     ]

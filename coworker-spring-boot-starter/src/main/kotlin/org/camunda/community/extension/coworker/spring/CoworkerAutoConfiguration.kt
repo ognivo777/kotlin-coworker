@@ -4,10 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import io.camunda.zeebe.client.ZeebeClient
 import io.camunda.zeebe.client.api.JsonMapper
 import io.camunda.zeebe.client.impl.ZeebeObjectMapper
-import io.camunda.zeebe.spring.client.ZeebeClientSpringConfiguration
 import io.camunda.zeebe.spring.client.annotation.processor.AbstractZeebeAnnotationProcessor
 import io.camunda.zeebe.spring.client.annotation.processor.AnnotationProcessorConfiguration
-import io.camunda.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration
+import io.camunda.zeebe.spring.client.configuration.ZeebeClientAllAutoConfiguration
 import io.camunda.zeebe.spring.client.metrics.DefaultNoopMetricsRecorder
 import io.camunda.zeebe.spring.client.metrics.MetricsRecorder
 import io.camunda.zeebe.spring.client.properties.ZeebeClientConfigurationProperties
@@ -36,12 +35,11 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.core.env.Environment
 
 @Configuration
-@AutoConfigureAfter(ZeebeClientStarterAutoConfiguration::class, ZeebeClientSpringConfiguration::class)
+@AutoConfigureAfter(ZeebeClientAllAutoConfiguration::class)
 @AutoConfigureBefore(AnnotationProcessorConfiguration::class)
 @ConditionalOnClass(
-    ZeebeClientStarterAutoConfiguration::class,
+    ZeebeClientAllAutoConfiguration::class,
     ZeebeClient::class,
-    ZeebeClientSpringConfiguration::class,
     AnnotationProcessorConfiguration::class
 )
 open class CoworkerAutoConfiguration {

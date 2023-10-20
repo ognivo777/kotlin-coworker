@@ -1,12 +1,11 @@
 package org.camunda.community.extension.coworker.spring
 
 import com.ninjasquad.springmockk.MockkBean
-import com.ninjasquad.springmockk.clear
 import io.camunda.zeebe.client.ZeebeClient
 import io.camunda.zeebe.client.api.response.ActivatedJob
 import io.camunda.zeebe.client.api.worker.JobClient
 import io.camunda.zeebe.model.bpmn.Bpmn
-import io.camunda.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration
+import io.camunda.zeebe.spring.client.configuration.ZeebeClientAllAutoConfiguration
 import io.camunda.zeebe.spring.client.metrics.MetricsRecorder
 import io.camunda.zeebe.spring.test.ZeebeSpringTest
 import io.mockk.clearMocks
@@ -26,7 +25,7 @@ private const val THROW_NAME = "throw"
 @SpringBootTest(
     classes = [
         JacksonAutoConfiguration::class,
-        ZeebeClientStarterAutoConfiguration::class,
+        ZeebeClientAllAutoConfiguration::class,
         CoworkerAutoConfiguration::class,
         MetricsTest::class
     ]

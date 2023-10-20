@@ -5,7 +5,7 @@ import io.camunda.zeebe.client.api.response.ActivatedJob
 import io.camunda.zeebe.client.api.worker.JobClient
 import io.camunda.zeebe.model.bpmn.Bpmn
 import io.camunda.zeebe.process.test.assertions.BpmnAssert.assertThat
-import io.camunda.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration
+import io.camunda.zeebe.spring.client.configuration.ZeebeClientAllAutoConfiguration
 import io.camunda.zeebe.spring.test.ZeebeSpringTest
 import io.camunda.zeebe.spring.test.ZeebeTestThreadSupport
 import kotlinx.coroutines.future.await
@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 @SpringBootTest(
     classes = [
         JacksonAutoConfiguration::class,
-        ZeebeClientStarterAutoConfiguration::class,
+        ZeebeClientAllAutoConfiguration::class,
         CoworkerAutoConfiguration::class,
         SmokeTest::class
     ]
